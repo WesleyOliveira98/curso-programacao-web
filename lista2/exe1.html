@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 1</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" minlength="1" maxlength="10" required placeholder="Digite seu nome">
+        </div>
+        <div>
+            <label for="preco">Preço do Produto (R$)</label>
+            <input type="number" id="preco" name="preco" min="1" required placeholder="Digite o preço">
+        </div>
+        <div>
+            <label for="desconto">Desconto (%)</label>
+            <input type="number" id="desconto" name="desconto" min="1" max="100" required placeholder="Digite o desconto">
+        </div>
+        <div>
+            <button type="submit">Clique Aqui</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var preco = document.getElementById('preco').value
+            var desconto = document.getElementById('desconto').value
+
+            //Validação de formulários com javascript
+            /*if (preco == "") {
+                alert("Preencha o campo preço")
+                return
+            }
+            else if (preco < 1) {
+                alert("O preço deve ser maior ou igual a 1")
+                return
+            }
+
+            if (desconto == "") {
+                alert("Preencha o campo desconto")
+                return
+            }
+            else if (desconto < 1 || desconto > 100) {
+                alert("O valor do desconto deve ser entre 1 e 100")
+                return
+            }*/
+             
+            var descontoFinal = preco * (desconto / 100)
+            var precoFinal = preco - descontoFinal
+            document.querySelector("#resultado").innerHTML = `Desconto de: R$${descontoFinal.toFixed(2)} <br> Preço com desconto: R$${precoFinal.toFixed(2)}`
+        })
+    </script>
+</body>
+</html>

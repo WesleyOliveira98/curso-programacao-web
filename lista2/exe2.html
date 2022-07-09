@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 2</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="temperatura">Temperatura F°</label>
+            <input type="number" id="temperatura" name="temperatura" required placeholder="Digite um valor">
+        </div>
+        <div>
+            <button type="submit">Clique Aqui</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var fahrenheit = document.getElementById('temperatura').value
+            var celsius = (fahrenheit - 32) / 1.8
+            document.querySelector("#resultado").innerHTML = `${celsius.toFixed(2)}°C`
+        })
+    </script>
+</body>
+</html>

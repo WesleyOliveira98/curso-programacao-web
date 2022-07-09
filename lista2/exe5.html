@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 5</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="altura">Altura (m)</label>
+            <input type="number" id="altura" name="altura" required min="0.01" step="0.01" placeholder="Digite a altura">
+        </div>
+        <div>
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso" required min="1" placeholder="Digite o peso">
+        </div>
+        <div>
+            <button type="submit">Calcular IMC</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var altura = document.getElementById('altura').value
+            var peso = document.getElementById('peso').value
+            var imc = peso / (altura * altura)
+
+            var faixa = ""
+            if (imc < 18.5) faixa = "Abaixo do peso"
+            else if (imc >= 18.5 && imc < 25) faixa = "Normal"
+            else if (imc >= 25 && imc < 30) faixa = "Sobrepeso"
+            else if (imc >= 30 && imc < 35) faixa = "Obesidade grau 1"
+            else if (imc >= 35 && imc < 40) faixa = "Obesidade grau 2"
+            else if (imc >= 40) faixa = "Obesidade grau 3"
+            
+            document.getElementById("resultado").innerHTML = `O seu IMC é: ${imc.toFixed(2)} <br> Faixa: ${faixa}`
+        })
+    </script>
+</body>
+</html>

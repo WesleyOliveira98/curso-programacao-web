@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 4</h2>
+    <label for="numero1">Número 1</label><br>
+    <input type="number" id="numero1" placeholder="Digite um número"><br>
+    <label for="numero2">Número 2</label><br>
+    <input type="number" id="numero2" placeholder="Digite um número">
+    <h3 id="resultado"></h3>
+    <button type="button" onclick="media()">Clique Aqui</button>
+    <script>
+        function media() {
+            var numero1 = document.getElementById("numero1").value
+            var numero2 = document.getElementById("numero2").value
+            var soma = Number(numero1) + Number(numero2)
+            var media = soma / 2
+            document.getElementById("resultado").innerHTML = `A média de ${numero1} e ${numero2} é ${media}`
+        }
+    </script>
+</body>
+</html>

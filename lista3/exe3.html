@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        form {
+            background-color: white;
+            width: 60%;
+            margin: 0 20%;
+            padding: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 20px black;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 3</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="meta">Meta de Vendas (R$)</label>
+            <input type="number" id="meta" name="meta" required min="1" placeholder="Digite um valor">
+        </div>
+        <div>
+            <label for="vendas">Total de Vendas (R$)</label>
+            <input type="number" id="vendas" name="vendas" required min="1" placeholder="Digite um valor">
+        </div>
+        <div>
+            <button type="submit">Clique Aqui</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var meta = document.getElementById('meta').value
+            var vendas = document.getElementById('vendas').value
+            var atingimento = (vendas * 100) / meta
+            document.getElementById("resultado").innerHTML = `Atingimos ${atingimento.toFixed(2)}% da meta!`
+        })
+    </script>
+</body>
+</html>

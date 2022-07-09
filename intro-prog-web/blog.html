@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="C:\Users\wgd_oliveira\Pictures\blogar.png">
+    <title>Blog</title>
+    <!-- TAG style -->
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: dodgerblue; 
+            color: white; 
+            text-align: center;
+        }
+
+        header {
+            background-color: white;
+            color: dodgerblue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 70px;
+        }
+
+        header span {
+            display: flex;
+            align-items: center;
+        }
+
+        header span strong {
+            font-size: 24px;
+        }
+
+        nav > ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: dodgerblue;
+            padding: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin: 0 10%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        aside {
+            width: 10%;
+            position: fixed;
+            right: 0;
+        }
+
+        aside > ol {
+            text-align: left;
+        }
+
+        aside li {
+            margin: 10px 0;
+        }
+
+        aside a {
+            text-align: left;
+            text-decoration: none;
+            color: white;
+        }
+
+        #titulo {
+            font-style: italic;
+        }
+
+        img + p {
+            font-weight: bold;
+        }
+
+        #titulo ~ h2 {
+            text-decoration: underline;
+        }
+
+        a[href="mailto:wesleygabrieldeoliveir@gmail.com"] {
+            font-weight: bold;
+        }
+
+        a[href="tel:1640028922"] {
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        h2::before{
+            content: "<";
+        }
+        h2::after {
+            content: ">";
+        }
+        p::first-letter {
+            font-size: 32px;
+        }
+        p::first-line {
+            font-weight: bold;
+        }
+        h2::selection {
+            background-color: blue;
+        }
+        aside li::marker {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-code-fill" viewBox="0 0 16 16">
+                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 1 1 .708-.708z"/>
+            </svg>
+            <strong>Blog do Código</strong>
+        </span>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="./formulario.html">Sobre</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- classe container -->
+    <main class="container">
+        <!-- TAG section -->
+        <section>
+            <article>
+                <h2 id="titulo">Artigo Sobre Programação Web</h2>
+                <img width="560" height="315" src="https://www.techlise.com.br/blog/wp-content/uploads/2019/11/como-avaliar-a-qualidade-do-codigo-770x515.png" alt="codigo">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu placerat quam, vitae lobortis lectus. Integer vestibulum libero vitae elit faucibus, sit amet pharetra turpis condimentum. In egestas vehicula purus sed tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper turpis. Curabitur non arcu nisi. Morbi consequat turpis eget arcu accumsan tristique. Aenean ac interdum sapien. Nam ut egestas lectus. Aenean auctor porttitor tempus. Pellentesque quis libero nec mauris placerat pellentesque quis a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sem tellus, accumsan a placerat ut, vestibulum vel ligula.
+    
+    Maecenas ac auctor tortor. Vestibulum dapibus venenatis felis, et interdum dui mollis a. Integer id elementum erat. In sagittis nibh ut eros cursus, sit amet mattis mauris commodo. In tempus felis eget lectus facilisis, id ultrices mi pulvinar. Integer risus ligula, sollicitudin id erat non, laoreet accumsan eros. Integer at condimentum nulla. Donec placerat convallis orci. Nullam tincidunt orci id risus porttitor, et fringilla lorem elementum. Nunc erat felis, feugiat et eleifend vel, ullamcorper sed felis. Nulla aliquam nisi egestas felis ornare dapibus. Nulla dignissim feugiat pretium. Quisque ac lacinia justo, vel sollicitudin quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie odio vel dapibus porta.
+    
+    Mauris eget blandit leo. Sed sagittis risus ac nisl mattis, ut tristique orci pretium. Curabitur finibus non nunc vitae cursus. Vestibulum sagittis felis urna, eget vestibulum purus fringilla vel. Quisque et mi non eros porta suscipit. Nulla molestie justo sit amet felis placerat porttitor. Nunc eleifend fringilla felis, et vehicula diam ullamcorper quis. Aenean in nibh at risus euismod consectetur. Integer neque orci, congue id diam finibus, commodo commodo eros. Etiam vitae leo malesuada, convallis lacus pulvinar, mollis ligula. Donec odio mi, sodales in accumsan eget, lobortis in ante. Nunc suscipit urna quis purus tristique porttitor.
+    
+    Nam in convallis odio. Nunc posuere porta dolor nec rhoncus. Vestibulum quis pulvinar dui. Proin sed justo velit. Praesent luctus aliquet orci nec auctor. Nam tempus consectetur lacus, vitae elementum felis tristique at. Quisque facilisis orci eu metus congue pharetra. Curabitur nec tellus non neque hendrerit posuere et non arcu. Praesent volutpat lacus vitae erat laoreet ornare. Duis hendrerit sollicitudin fermentum. Fusce vitae euismod orci. Curabitur quis nulla erat. Nulla arcu ligula, sollicitudin at mauris ac, feugiat tincidunt nunc. Vestibulum id rutrum metus. Pellentesque gravida urna quis ultricies pharetra. Nulla molestie urna a elit laoreet sodales.
+    
+    Mauris vulputate varius tellus a scelerisque. Quisque sagittis arcu odio, eu cursus orci facilisis non. Vivamus pharetra faucibus orci at sodales. Aliquam ultricies eros venenatis, vulputate lectus placerat, scelerisque turpis. Sed quis magna turpis. Vestibulum rhoncus nisl a augue convallis fringilla. In magna nunc, fringilla volutpat consequat id, ornare nec sapien. Praesent elit ante, semper maximus commodo in, rhoncus et nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae sapien urna. Mauris orci purus, efficitur viverra blandit eget, eleifend eget dui. Ut posuere mollis dignissim. Integer blandit laoreet massa, ac pretium lacus blandit et. Pellentesque quis mauris sem.
+                </p>
+                <h2 id="video">Video</h2>
+                <video controls style="width: 600px; height: 350px;" src="C:\Users\wgd_oliveira\Videos\Captures\Aula 1 - Introdução a Lógica de Programação - Apresentações Google - Google Chrome 2022-05-07 10-12-20.mp4"></video>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu placerat quam, vitae lobortis lectus. Integer vestibulum libero vitae elit faucibus, sit amet pharetra turpis condimentum. In egestas vehicula purus sed tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper turpis. Curabitur non arcu nisi. Morbi consequat turpis eget arcu accumsan tristique. Aenean ac interdum sapien. Nam ut egestas lectus. Aenean auctor porttitor tempus. Pellentesque quis libero nec mauris placerat pellentesque quis a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sem tellus, accumsan a placerat ut, vestibulum vel ligula.
+    
+    Maecenas ac auctor tortor. Vestibulum dapibus venenatis felis, et interdum dui mollis a. Integer id elementum erat. In sagittis nibh ut eros cursus, sit amet mattis mauris commodo. In tempus felis eget lectus facilisis, id ultrices mi pulvinar. Integer risus ligula, sollicitudin id erat non, laoreet accumsan eros. Integer at condimentum nulla. Donec placerat convallis orci. Nullam tincidunt orci id risus porttitor, et fringilla lorem elementum. Nunc erat felis, feugiat et eleifend vel, ullamcorper sed felis. Nulla aliquam nisi egestas felis ornare dapibus. Nulla dignissim feugiat pretium. Quisque ac lacinia justo, vel sollicitudin quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie odio vel dapibus porta.
+    
+    Mauris eget blandit leo. Sed sagittis risus ac nisl mattis, ut tristique orci pretium. Curabitur finibus non nunc vitae cursus. Vestibulum sagittis felis urna, eget vestibulum purus fringilla vel. Quisque et mi non eros porta suscipit. Nulla molestie justo sit amet felis placerat porttitor. Nunc eleifend fringilla felis, et vehicula diam ullamcorper quis. Aenean in nibh at risus euismod consectetur. Integer neque orci, congue id diam finibus, commodo commodo eros. Etiam vitae leo malesuada, convallis lacus pulvinar, mollis ligula. Donec odio mi, sodales in accumsan eget, lobortis in ante. Nunc suscipit urna quis purus tristique porttitor.
+    
+    Nam in convallis odio. Nunc posuere porta dolor nec rhoncus. Vestibulum quis pulvinar dui. Proin sed justo velit. Praesent luctus aliquet orci nec auctor. Nam tempus consectetur lacus, vitae elementum felis tristique at. Quisque facilisis orci eu metus congue pharetra. Curabitur nec tellus non neque hendrerit posuere et non arcu. Praesent volutpat lacus vitae erat laoreet ornare. Duis hendrerit sollicitudin fermentum. Fusce vitae euismod orci. Curabitur quis nulla erat. Nulla arcu ligula, sollicitudin at mauris ac, feugiat tincidunt nunc. Vestibulum id rutrum metus. Pellentesque gravida urna quis ultricies pharetra. Nulla molestie urna a elit laoreet sodales.
+    
+    Mauris vulputate varius tellus a scelerisque. Quisque sagittis arcu odio, eu cursus orci facilisis non. Vivamus pharetra faucibus orci at sodales. Aliquam ultricies eros venenatis, vulputate lectus placerat, scelerisque turpis. Sed quis magna turpis. Vestibulum rhoncus nisl a augue convallis fringilla. In magna nunc, fringilla volutpat consequat id, ornare nec sapien. Praesent elit ante, semper maximus commodo in, rhoncus et nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae sapien urna. Mauris orci purus, efficitur viverra blandit eget, eleifend eget dui. Ut posuere mollis dignissim. Integer blandit laoreet massa, ac pretium lacus blandit et. Pellentesque quis mauris sem.
+                </p>
+                <h2 id="audio">Audio</h2>
+                <audio controls src="C:\Users\wgd_oliveira\Music\0020 - ft guima & tavera.wav"></audio>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu placerat quam, vitae lobortis lectus. Integer vestibulum libero vitae elit faucibus, sit amet pharetra turpis condimentum. In egestas vehicula purus sed tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper turpis. Curabitur non arcu nisi. Morbi consequat turpis eget arcu accumsan tristique. Aenean ac interdum sapien. Nam ut egestas lectus. Aenean auctor porttitor tempus. Pellentesque quis libero nec mauris placerat pellentesque quis a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sem tellus, accumsan a placerat ut, vestibulum vel ligula.
+    
+    Maecenas ac auctor tortor. Vestibulum dapibus venenatis felis, et interdum dui mollis a. Integer id elementum erat. In sagittis nibh ut eros cursus, sit amet mattis mauris commodo. In tempus felis eget lectus facilisis, id ultrices mi pulvinar. Integer risus ligula, sollicitudin id erat non, laoreet accumsan eros. Integer at condimentum nulla. Donec placerat convallis orci. Nullam tincidunt orci id risus porttitor, et fringilla lorem elementum. Nunc erat felis, feugiat et eleifend vel, ullamcorper sed felis. Nulla aliquam nisi egestas felis ornare dapibus. Nulla dignissim feugiat pretium. Quisque ac lacinia justo, vel sollicitudin quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie odio vel dapibus porta.
+    
+    Mauris eget blandit leo. Sed sagittis risus ac nisl mattis, ut tristique orci pretium. Curabitur finibus non nunc vitae cursus. Vestibulum sagittis felis urna, eget vestibulum purus fringilla vel. Quisque et mi non eros porta suscipit. Nulla molestie justo sit amet felis placerat porttitor. Nunc eleifend fringilla felis, et vehicula diam ullamcorper quis. Aenean in nibh at risus euismod consectetur. Integer neque orci, congue id diam finibus, commodo commodo eros. Etiam vitae leo malesuada, convallis lacus pulvinar, mollis ligula. Donec odio mi, sodales in accumsan eget, lobortis in ante. Nunc suscipit urna quis purus tristique porttitor.
+    
+    Nam in convallis odio. Nunc posuere porta dolor nec rhoncus. Vestibulum quis pulvinar dui. Proin sed justo velit. Praesent luctus aliquet orci nec auctor. Nam tempus consectetur lacus, vitae elementum felis tristique at. Quisque facilisis orci eu metus congue pharetra. Curabitur nec tellus non neque hendrerit posuere et non arcu. Praesent volutpat lacus vitae erat laoreet ornare. Duis hendrerit sollicitudin fermentum. Fusce vitae euismod orci. Curabitur quis nulla erat. Nulla arcu ligula, sollicitudin at mauris ac, feugiat tincidunt nunc. Vestibulum id rutrum metus. Pellentesque gravida urna quis ultricies pharetra. Nulla molestie urna a elit laoreet sodales.
+    
+    Mauris vulputate varius tellus a scelerisque. Quisque sagittis arcu odio, eu cursus orci facilisis non. Vivamus pharetra faucibus orci at sodales. Aliquam ultricies eros venenatis, vulputate lectus placerat, scelerisque turpis. Sed quis magna turpis. Vestibulum rhoncus nisl a augue convallis fringilla. In magna nunc, fringilla volutpat consequat id, ornare nec sapien. Praesent elit ante, semper maximus commodo in, rhoncus et nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae sapien urna. Mauris orci purus, efficitur viverra blandit eget, eleifend eget dui. Ut posuere mollis dignissim. Integer blandit laoreet massa, ac pretium lacus blandit et. Pellentesque quis mauris sem.
+                </p>
+                <h2 id="youtube">Youtube</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iF2MdbrTiBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu placerat quam, vitae lobortis lectus. Integer vestibulum libero vitae elit faucibus, sit amet pharetra turpis condimentum. In egestas vehicula purus sed tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper turpis. Curabitur non arcu nisi. Morbi consequat turpis eget arcu accumsan tristique. Aenean ac interdum sapien. Nam ut egestas lectus. Aenean auctor porttitor tempus. Pellentesque quis libero nec mauris placerat pellentesque quis a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sem tellus, accumsan a placerat ut, vestibulum vel ligula.
+    
+    Maecenas ac auctor tortor. Vestibulum dapibus venenatis felis, et interdum dui mollis a. Integer id elementum erat. In sagittis nibh ut eros cursus, sit amet mattis mauris commodo. In tempus felis eget lectus facilisis, id ultrices mi pulvinar. Integer risus ligula, sollicitudin id erat non, laoreet accumsan eros. Integer at condimentum nulla. Donec placerat convallis orci. Nullam tincidunt orci id risus porttitor, et fringilla lorem elementum. Nunc erat felis, feugiat et eleifend vel, ullamcorper sed felis. Nulla aliquam nisi egestas felis ornare dapibus. Nulla dignissim feugiat pretium. Quisque ac lacinia justo, vel sollicitudin quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie odio vel dapibus porta.
+    
+    Mauris eget blandit leo. Sed sagittis risus ac nisl mattis, ut tristique orci pretium. Curabitur finibus non nunc vitae cursus. Vestibulum sagittis felis urna, eget vestibulum purus fringilla vel. Quisque et mi non eros porta suscipit. Nulla molestie justo sit amet felis placerat porttitor. Nunc eleifend fringilla felis, et vehicula diam ullamcorper quis. Aenean in nibh at risus euismod consectetur. Integer neque orci, congue id diam finibus, commodo commodo eros. Etiam vitae leo malesuada, convallis lacus pulvinar, mollis ligula. Donec odio mi, sodales in accumsan eget, lobortis in ante. Nunc suscipit urna quis purus tristique porttitor.
+    
+    Nam in convallis odio. Nunc posuere porta dolor nec rhoncus. Vestibulum quis pulvinar dui. Proin sed justo velit. Praesent luctus aliquet orci nec auctor. Nam tempus consectetur lacus, vitae elementum felis tristique at. Quisque facilisis orci eu metus congue pharetra. Curabitur nec tellus non neque hendrerit posuere et non arcu. Praesent volutpat lacus vitae erat laoreet ornare. Duis hendrerit sollicitudin fermentum. Fusce vitae euismod orci. Curabitur quis nulla erat. Nulla arcu ligula, sollicitudin at mauris ac, feugiat tincidunt nunc. Vestibulum id rutrum metus. Pellentesque gravida urna quis ultricies pharetra. Nulla molestie urna a elit laoreet sodales.
+    
+    Mauris vulputate varius tellus a scelerisque. Quisque sagittis arcu odio, eu cursus orci facilisis non. Vivamus pharetra faucibus orci at sodales. Aliquam ultricies eros venenatis, vulputate lectus placerat, scelerisque turpis. Sed quis magna turpis. Vestibulum rhoncus nisl a augue convallis fringilla. In magna nunc, fringilla volutpat consequat id, ornare nec sapien. Praesent elit ante, semper maximus commodo in, rhoncus et nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae sapien urna. Mauris orci purus, efficitur viverra blandit eget, eleifend eget dui. Ut posuere mollis dignissim. Integer blandit laoreet massa, ac pretium lacus blandit et. Pellentesque quis mauris sem.
+                </p>
+                <h2 id="iframe">Iframe</h2>
+                <iframe width="560" height="315" src="https://www.google.com" frameborder="0"></iframe><br><br>
+                <a href="http://www.google.com" target="_blank">Clique aqui para saber mais.</a><br><br>
+                <button style="background-color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;" type="button">
+                    Curtir Post
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                    </svg>
+                </button>
+            </article>
+        </section>
+        <!-- TAG aside -->
+        <aside>
+            <ol>
+                <li>
+                    <a href="#titulo">Inicio</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
+                <li>
+                    <a href="#audio">Audio</a>
+                </li>
+                <li>
+                    <a href="#youtube">Youtube</a>
+                </li>
+                <li>
+                    <a href="#iframe">Iframe</a>
+                </li>
+            </ol>
+        </aside>
+    </main>
+    <footer style="margin-top: 100px;">
+        <a id="email" style="text-decoration: none; color: white" href="mailto:wesleygabrieldeoliveir@gmail.com">
+            wesleygabrieldeoliveira@gmail.com
+        </a><br>
+        <a style="text-decoration: none; color: white" href="tel:1640028922">(16)4002-8922</a><br><br>
+        2022 - Blog do Codigo
+    </footer>
+</body>
+</html>

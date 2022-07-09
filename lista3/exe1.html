@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        form {
+            background-color: white;
+            width: 60%;
+            margin: 0 20%;
+            padding: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 20px black;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 1</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="raio">Raio</label>
+            <input type="number" id="raio" name="raio" required min="1" placeholder="Digite um valor">
+        </div>
+        <div>
+            <button type="submit">Calcular Área</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var raio = document.getElementById('raio').value
+            var area = 2 * Math.PI * raio
+            document.getElementById("resultado").innerHTML = `A área é: ${area.toFixed(2)}`
+        })
+    </script>
+</body>
+</html>

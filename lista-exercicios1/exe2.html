@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 2</h2>
+    <label for="numero">Número</label><br>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <h3 id="resultado"></h3>
+    <button type="button" onclick="verificaNumero()">Clique Aqui</button>
+    <script>
+        function verificaNumero() {
+            var numero = document.getElementById("numero").value
+            var resto = numero % 2
+            var resultado = document.getElementById("resultado")
+            if (resto == 0) {
+                resultado.innerHTML = `O número ${numero} é par`
+            } else {
+                resultado.innerHTML = `O número ${numero} é impar`
+            } 
+        }
+    </script>
+</body>
+</html>

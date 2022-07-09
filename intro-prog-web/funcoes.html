@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <h1>Funções</h1>
+
+    <script>
+
+        //Função simples
+        function aviso() {
+            console.log("A função foi executada")
+            alert("Esse é um aviso!")
+        }
+
+        //Chama a função
+        aviso()
+
+        //Função que recebe parametros
+        function soma(a, b) {
+            let resultado = a + b
+            return resultado
+        }
+
+        //Declara a variavel que irá receber o valor retornado
+        //pela função, e ao chamar a função é passado dois números 
+        //como parametros
+        var res = soma(2, 3)
+        console.log(res)
+
+        //Escopos
+        //Variavel Global
+        var global = 1
+
+        function escopo() {
+            //Variavel Local
+            var local = 2
+            console.log(global) //Exibe 1
+            console.log(local) //Exibe 2
+        }
+
+        //Chama a função
+        escopo()
+
+        console.log(global) //Exibe 1
+        console.log(local) //Exibe erro: local is not defined
+
+        if (global == 1) {
+            //Variavel Local com escopo de bloco
+            let bloco = 3
+            console.log(bloco) //Exibe 3 
+        }
+
+        console.log(bloco) //Exibe erro: bloco is not defined
+
+    </script>
+</body>
+
+</html>

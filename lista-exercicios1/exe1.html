@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 1</h2>
+    <label for="ano">Ano de Nascimento</label><br>
+    <input type="number" id="ano" placeholder="Digite o seu ano de nascimento">
+    <h3 id="resultado"></h3>
+    <button type="button" onclick="calculaIdade()">Clique Aqui</button>
+    <script>
+        function calculaIdade() {
+            var ano = document.getElementById("ano").value
+            var idade = 2022 - ano
+            document.getElementById("resultado").innerHTML = `Você tem ${idade} anos`
+        }
+    </script>
+</body>
+</html>

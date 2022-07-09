@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        form div {
+            margin: 10px 0;
+        }
+        form label{
+            display: block;
+        }
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+        }
+        form button {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicio 4</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="numero">Número</label>
+            <input type="number" id="numero" name="numero" required min="1" placeholder="Digite um valor">
+        </div>
+        <div>
+            <button type="submit">Clique Aqui</button>
+        </div>
+    </form>
+    <ul id="tabuada"></ul>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault()
+            var numero = document.getElementById('numero').value
+            var tabuada = document.getElementById('tabuada')
+            tabuada.innerHTML = ""
+            for (let i=1; i<=10; i++) {
+                let li = document.createElement("li")
+                li.textContent = `${numero} x ${i} = ${numero * i}`
+                tabuada.appendChild(li)
+            }
+        })
+    </script>
+</body>
+</html>
