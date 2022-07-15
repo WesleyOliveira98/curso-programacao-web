@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    ...
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-    ...
-
+    <h2>Exercicio 1</h2>
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="raio">Raio</label>
+            <input type="number" id="raio" name="raio" required min="1" placeholder="Digite um valor">
+        </div>
+        <div>
+            <button type="submit">Calcular Área</button>
+        </div>
+    </form>
+    <h3 id="resultado"></h3>
     <script src="./exe1.js"></script>
 </body>
 </html>
-
