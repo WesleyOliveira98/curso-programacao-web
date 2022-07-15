@@ -5,39 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 4</title>
-    <style>
-        body {
-            background-color: lightslategray;
-            text-align: center;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        form {
-            background-color: white;
-            width: 60%;
-            margin: 0 20%;
-            padding: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 0 20px black;
-        }
-        form div {
-            margin: 10px 0;
-        }
-        form label{
-            display: block;
-        }
-        form input {
-            width: 30%;
-            border-radius: 10px;
-            padding: 5px;
-        }
-        form button {
-            background-color: dodgerblue;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <h2>Exercicio 4</h2>
@@ -51,23 +19,6 @@
         </div>
     </form>
     <h3 id="resultado"></h3>
-    <script>
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault()
-            var lista = document.getElementById('lista').value
-            var listaSplit = lista.split(",")
-            console.log(listaSplit)
-
-            //.map é uma função que percorre cada item de um array para personalizar o valor
-            var listaNumeros = listaSplit.map(function(item) {
-                return Number(item)
-            })
-            console.log(listaNumeros)
-
-            //... significa espalhamento de itens, retorna uma lista com cada item do array
-            var maior = Math.max(...listaNumeros)
-            document.getElementById("resultado").innerHTML = `O maior número é o ${maior}`
-        })
-    </script>
+    <script src="./exe4.js"></script>
 </body>
 </html>

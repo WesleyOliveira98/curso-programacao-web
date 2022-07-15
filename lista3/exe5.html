@@ -5,39 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 5</title>
-    <style>
-        body {
-            background-color: lightslategray;
-            text-align: center;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        form {
-            background-color: white;
-            width: 60%;
-            margin: 0 20%;
-            padding: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 0 20px black;
-        }
-        form div {
-            margin: 10px 0;
-        }
-        form label{
-            display: block;
-        }
-        form input {
-            width: 30%;
-            border-radius: 10px;
-            padding: 5px;
-        }
-        form button {
-            background-color: dodgerblue;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <h2>Exercicio 5</h2>
@@ -59,26 +27,6 @@
         </div>
     </form>
     <h3 id="resultado"></h3>
-    <script>
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault()
-            var a = document.getElementById('a').value
-            var b = document.getElementById('b').value
-            var c = document.getElementById('c').value
-            var delta = (b * b) - (4 * a * c)
-            if (delta < 0) {
-                alert("O valor de delta (b² - 4.a.c) deve ser maior que 0")
-                return
-            }
-
-            console.log(delta)
-            console.log(Math.sqrt(delta))
-            
-            var x1 = (-b + Math.sqrt(delta)) / (2 * a)
-            var x2 = (-b - Math.sqrt(delta)) / (2 * a)
-            
-            document.getElementById("resultado").innerHTML = `O valor de x1 é ${x1.toFixed(2)} <br> O valor de x2 é ${x2.toFixed(2)}`
-        })
-    </script>
+    <script src="./exe5.js"></script>
 </body>
 </html>

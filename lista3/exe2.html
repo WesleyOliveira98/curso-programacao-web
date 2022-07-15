@@ -5,39 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 2</title>
-    <style>
-        body {
-            background-color: lightslategray;
-            text-align: center;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        form {
-            background-color: white;
-            width: 60%;
-            margin: 0 20%;
-            padding: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 0 20px black;
-        }
-        form div {
-            margin: 10px 0;
-        }
-        form label{
-            display: block;
-        }
-        form input {
-            width: 30%;
-            border-radius: 10px;
-            padding: 5px;
-        }
-        form button {
-            background-color: dodgerblue;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <h2>Exercicio 2</h2>
@@ -55,15 +23,6 @@
         </div>
     </form>
     <h3 id="resultado"></h3>
-    <script>
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault()
-            var cateto1 = document.getElementById('cateto1').value
-            var cateto2 = document.getElementById('cateto2').value
-            var soma = Math.pow(cateto1,2) + Math.pow(cateto2,2)
-            var hipotenusa = Math.sqrt(soma)
-            document.getElementById("resultado").innerHTML = `A hipotenusa é: ${hipotenusa.toFixed(2)}`
-        })
-    </script>
+    <script src="./exe2.js"></script>
 </body>
 </html>
