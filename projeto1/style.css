@@ -1,0 +1,49 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, dodgerblue,lightskyblue);
+}
+
+.table {
+    background-color: white;
+    width: 180px;
+    height: 180px;
+}
+td {
+    font-weight: bold;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+}
+td:hover {
+    cursor: pointer;
+}
+.row {
+    margin: 10px 0;
+}
+.row-flex {
+    display: flex;
+    justify-content: center;
+}
+.jogador {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: .5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jogador strong {
+    font-size: 28px;
+}
+.vencedor {
+    color: green
+}
+.oculto {
+    display: none;
+}
+.blocked:hover {
+    cursor: no-drop;
+}
