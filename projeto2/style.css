@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: dodgerblue;
+    background-image: url("https://cdn.wizard.com.br/wp-content/uploads/2017/07/02165739/quiz-palavras-em-ingles-plural-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
 }
 
 .pergunta {
