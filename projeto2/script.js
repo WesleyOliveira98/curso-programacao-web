@@ -1,69 +1,29 @@
-const perguntas = [
-    {
-        pergunta: "Como declarar uma variavel no Javascript?",
-        alternativas: {
-            a: "variable nome",
-            b: "var nome",
-            c: "v nome",
-            d: "function name"
-        },
-        resposta: "b"
-    },
-    {
-        pergunta: "Como declarar uma função no Javascript?",
-        alternativas: {
-            a: "funcao facaAlgo() {}",
-            b: "function = facaAlgo() {}",
-            c: "function facaAlgo[] ()",
-            d: "function facaAlgo() {}"
-        },
-        resposta: "d"
-    },
-    {
-        pergunta: "Qual forma de se declarar uma variavel que impede a mudança de seu valor?",
-        alternativas: {
-            a: "var",
-            b: "let",
-            c: "const",
-            d: "fixed"
-        },
-        resposta: "c"
-    },
-    {
-        pergunta: "Como fazer uma busca no DOM usando um seletor CSS?",
-        alternativas: {
-            a: "documet.getElementById('id')",
-            b: "documet.querySelector('#id')",
-            c: "documet.getElementByName('name')",
-            d: "documet.getElementByTagName('p')"
-        },
-        resposta: "b"
-    },
-    {
-        pergunta: "Como realizer uma operação condicional no Javascript?",
-        alternativas: {
-            a: "if (texto === 'texto')",
-            b: "if x > 5",
-            c: "if = y < 10",
-            d: "if (z) === (20)"
-        },
-        resposta: "a"
-    }
-]
-
 var perguntaAtual = 0
+var pergunta = document.querySelector(".pergunta-container")
+var finalizou = document.querySelector(".finalizou")
+
+window.addEventListener("load", () => {
+    let progresso = window.localStorage.getItem("pergunta-quiz")
+    if (progresso) {
+        if (progresso > perguntas.length-1) finalizado()
+        else {
+            perguntaAtual = Number(progresso)
+            document.querySelector(".continuar").classList.remove("oculto")
+        }
+    } else document.querySelector(".comecar").classList.remove("oculto")
+})
 
 function comecar() {
     montarPergunta()
-    perguntaIn()
+    fadeIn(pergunta)
 
-    var comecar = document.querySelector(".comecar")
-    comecar.classList.add("oculto")
+    document.querySelector(".comecar").classList.add("oculto")
+    document.querySelector(".continuar").classList.add("oculto")
 }
 
 function montarPergunta() {
     var pergunta = document.querySelector(".pergunta")
-    pergunta.innerHTML = perguntas[perguntaAtual].pergunta
+    pergunta.innerHTML = `${perguntaAtual+1}. ${perguntas[perguntaAtual].pergunta}`
 
     var alternativas = ["a","b","c","d"]
 
@@ -85,11 +45,13 @@ function montarPergunta() {
 
 function proximaPergunta() {
     perguntaAtual++
-
-    if (perguntaAtual > perguntas.length-1) return
-
-    perguntaInOut()
-
+    window.localStorage.setItem('pergunta-quiz',perguntaAtual)
+    if (perguntaAtual > perguntas.length-1) {
+        perguntaAtual = perguntas.length-1
+        finalizado()
+        return
+    } 
+    fadeInOut(pergunta, pergunta)
     setTimeout(() => {
         montarPergunta()
     },1000)
@@ -103,12 +65,7 @@ document.querySelector("form").addEventListener("submit", evento => {
     if (resposta.id === respostaCorreta) {
         resposta.classList.add("is-valid")
         document.querySelector(".enviar-resposta").classList.add("oculto")
-
-        if (perguntaAtual === perguntas.length-1) {
-            alert("Parabéns! Você finalizou o quizz.")
-            document.querySelector(".reiniciar").classList.remove("oculto")
-        }
-        else document.querySelector(".proxima-pergunta").classList.remove("oculto")
+        document.querySelector(".proxima-pergunta").classList.remove("oculto")
     }
     else {
         resposta.classList.add("is-invalid")
@@ -122,37 +79,52 @@ document.querySelector("form").addEventListener("submit", evento => {
 
 function reiniciar() {
     perguntaAtual = 0
-    perguntaOut()
+    window.localStorage.clear()
+    if (pergunta.classList.contains("oculto")) fadeOut(finalizou)
+    else fadeOut(pergunta)
     setTimeout(() => {
         document.querySelector(".comecar").classList.remove("oculto")
     },1000)
     document.querySelector(".reiniciar").classList.add("oculto")
 }
 
-function perguntaIn() {
-    var container = document.querySelector(".shadow")
-    container.classList.remove("oculto")
-    container.classList.remove("fade-out")
-    container.classList.add("fade-in")
+function fadeIn(elemento) {
+    elemento.classList.remove("oculto")
+    elemento.classList.remove("fade-out")
+    elemento.classList.add("fade-in")
 }
 
-function perguntaOut() {
-    var container = document.querySelector(".shadow")
-    container.classList.remove("oculto")
-    container.classList.remove("fade-in")
-    container.classList.add("fade-out")
+function fadeOut(elemento) {
+    elemento.classList.remove("oculto")
+    elemento.classList.remove("fade-in")
+    elemento.classList.add("fade-out")
     setTimeout(() => {
-        container.classList.add("oculto")
+        elemento.classList.add("oculto")
     },1000)
 }
 
-function perguntaInOut() {
-    var container = document.querySelector(".shadow")
-    container.classList.remove("oculto")
-    container.classList.remove("fade-in")
-    container.classList.add("fade-out")
+function fadeInOut(elemento1,elemento2) {
+    elemento1.classList.remove("fade-in")
+    elemento1.classList.add("fade-out")
     setTimeout(() => {
-        container.classList.remove("fade-out")
-        container.classList.add("fade-in")
+        elemento1.classList.add("oculto")
+        elemento2.classList.remove("oculto")
+        elemento2.classList.remove("fade-out")
+        elemento2.classList.add("fade-in")
     },1000)
+}
+
+function finalizado() {
+    if (pergunta.classList.contains("oculto")) {
+        fadeIn(finalizou)
+        setTimeout(() => {
+            document.querySelector(".reiniciar").classList.remove("oculto")
+        },1000)
+    } 
+    else {
+        fadeInOut(pergunta, finalizou)
+        setTimeout(() => {
+            document.querySelector(".reiniciar").classList.remove("oculto")
+        },2000)
+    } 
 }
