@@ -83,6 +83,25 @@
 
         console.log(estado) // Retorna "São Paulo"
 
+        //Operador ternário
+
+        //Caso retorna true
+        var idade = 20
+        var maiorDeIdade = idade >= 18 ? "Maior de idade" : "Menor de idade"
+        console.log(maiorDeIdade) // Retorna "Maior de idade"
+
+        //Caso retorne false
+        idade = 17
+        maiorDeIdade = idade >= 18 ? "Maior de idade" : "Menor de idade"
+        console.log(maiorDeIdade) // Retorna "Menor de idade"
+
+        //Testando se o valor existe
+        var idadeExiste = idade ? true : false
+        console.log(idadeExiste) // Retorna true
+
+        idade = null
+        idadeExiste = idade ? true : false
+        console.log(idadeExiste) // Retorna false
 
     </script>
 </body>
