@@ -1,0 +1,25 @@
+header {
+    background: black;
+    color: white;
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tabela {
+    max-width: 100%;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.table {
+    width: 1800px;
+    margin: 0
+}
+
+.oculto {
+    display: none;
+}
