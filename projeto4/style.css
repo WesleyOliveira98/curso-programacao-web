@@ -11,15 +11,22 @@ header {
 
 .tabela {
     max-width: 100%;
+    max-height: 60vh;
     overflow: auto;
     border-radius: 10px;
 }
 
 .table {
     width: 1800px;
-    margin: 0
+    height: 100%;
+    margin: 0;
 }
 
 .oculto {
     display: none;
+}
+
+.graficos .col-md-6 {
+    overflow-x: auto;
+    overflow-y: hidden;
 }

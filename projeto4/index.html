@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./user.png">
 </head>
 
 <body>
@@ -30,6 +31,21 @@
     </header>
 
     <div class="container mt-3 mb-3">
+
+        <div class="pesquisa oculto row mb-3 animate__animated animate__fadeIn">
+            <div class="col-md-6">
+                <label for="filtro" class="form-label">Pesquisar Usuário</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="filtro" placeholder="Digite o nome do usuário" oninput="filtrar()">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="filtrar()">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="tabela oculto animate__animated animate__fadeIn">
             <table class="table table-dark table-striped table-fixed table-hover">
                 <thead>
@@ -47,6 +63,27 @@
                 <tbody></tbody>
             </table>
         </div>
+
+        <div class="graficos oculto animate__animated animate__fadeIn">
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div id="grafico-cidades"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="grafico-estados"></div>
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div id="grafico-emails"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="grafico-idades"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="text-center" id="loading">
             <div class="spinner-border" role="status">
             </div>
@@ -70,9 +107,50 @@
         </div>
     </div>
 
+    <div class="modal fade" id="deletar" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar exclusão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Confirma que deseja excluir o usuário "<strong id="nomeUsuario"></strong>" de ID <strong id="idUsuario"></strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="excluir()">
+                        Confirmar
+                        <span class="spinner-border spinner-border-sm oculto" role="status" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sucesso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Successo!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Operação realizada com sucesso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="./script.js"></script>
 </body>
 
