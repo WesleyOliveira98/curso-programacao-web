@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Aritmeticas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Operações Aritmeticas</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    //Operações Aritmeticas
+    var x = 10
+    var y = 5
+    //Adição
+    console.log(x + y) // Retorna 15
+    //Subtração
+    console.log(x - y) // Retorna 5
+    //Multiplicação
+    console.log(x * y) // Retorna 50
+    //Divisão
+    console.log(x / y) // Retorna 2
+    //Exponenciação
+    console.log(y ** 2) // Retorna 25
+    console.log(Math.pow(y, 2)) // Retorna 25
+    //Raiz Quadrada
+    console.log(Math.sqrt(9)) // Retorna 3
+    //Raiz Cúbica
+    console.log(Math.cbrt(8)) // Retorna 2
+    //Resto da Divisão
+    console.log(x % 2) // Retorna 0
+    console.log(y % 2) // Retorna 1
+
+    //Operadores de atribuição
+    var contador = 0
+    var numeros = [1,2,3,4,5]
+    
+    //Operador += soma o valor atual com o valor recebido
+    numeros.forEach(num => {
+        contador += num // equivalente contador = contador + num
+    })
+    console.log(contador) // Retorna 15
+
+    //Operador -= subtrai o valor atual com o valor recebido
+    numeros.forEach(num => {
+        contador -= num // equivalente contador = contador - num
+    })
+    console.log(contador) // Retorna 0
+
+    var numero = numeros[0]
+    //Operador *= multiplica o valor atual com o valor recebido
+    numero *= 4 //Equivalente numero = numero * 4
+    console.log(numero) // Retorna 4
+
+    //Operador /= divide o valor atual com o valor recebido
+    numero /= 2 //Equivalente numero = numero / 2
+    console.log(numero) // Retorna 2
+
+    //Operador **= eleva o valor atual ao valor recebido
+    numero **= 3 //Equivalente numero = numero ** 3
+    console.log(numero) // Retorna 8
+            </code>
+        </pre>
+
+        <footer>
+            ©2022 - Curso de Programação Web - Desenvolvido por Wesley
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/operacoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+input:focus {
+    outline: none;
+    border: solid blue 2px;
+}
+
+input:checked {
+    outline: solid red 2px;
+}
+
+#nome::placeholder {
+    color: blue;
+}

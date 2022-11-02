@@ -1,3 +1,8 @@
+:root {
+    --pricipal: #0c81f5;
+    --secundaria: #f5f4f4;
+}
+
 * {
     font-family: sans-serif;
 }
@@ -12,15 +17,15 @@ html {
 }
 
 body {
-    background-color: dodgerblue; 
-    color: white; 
+    background-color: var(--pricipal); 
+    color: var(--secundaria); 
     text-align: center;
     width: 100%;
 }
 
 header {
-    background-color: white;
-    color: dodgerblue;
+    background-color: var(--secundaria);
+    color: var(--pricipal);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,7 +62,7 @@ nav > ul {
 
 nav a {
     text-decoration: none;
-    color: dodgerblue;
+    color: var(--pricipal);
     padding: 10px;
     margin: 0 5px;
     font-size: 22px;
@@ -88,7 +93,7 @@ aside li {
 aside a {
     text-align: left;
     text-decoration: none;
-    color: white;
+    color: var(--secundaria);
 }
 
 #titulo {
@@ -112,8 +117,8 @@ a[href="tel:1640028922"] {
 }
 
 nav a:hover {
-    background-color: dodgerblue;
-    color: white;
+    background-color: var(--pricipal);
+    color: var(--secundaria);
 }
 
 h2::before{
@@ -136,7 +141,7 @@ aside li::marker {
 }
 
 a, a:hover {
-    color: white
+    color: var(--secundaria)
 }
 
 footer {
@@ -146,7 +151,7 @@ footer {
 
 footer a {
     text-decoration: none; 
-    color: white
+    color: var(--secundaria)
 }
 
 .copyright {

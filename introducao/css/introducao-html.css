@@ -1,0 +1,24 @@
+td {
+    padding: 15px;
+}
+table, td {
+    border: solid black 1px;
+    border-spacing: 0;
+}
+thead {
+    background-color: gray;
+    color: white;
+}
+
+ol li:first-child {
+    color: green;
+}
+ol li:last-child {
+    color: red;
+}
+ul li:nth-child(odd) {
+    background-color: #dddddd;
+}
+ul li:nth-child(even) {
+    background-color: gray;
+}
